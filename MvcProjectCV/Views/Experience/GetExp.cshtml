@@ -1,0 +1,32 @@
+﻿@model MvcProjectCV.Models.Entity.Experience
+
+@{
+    ViewBag.Title = "GetExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Edit Experience</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+    @Html.HiddenFor(x => x.ID)
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br />
+    @Html.Label("Subtitle")
+    @Html.TextBoxFor(x => x.Subtitle, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextAreaFor(x => x.Date, new { @class = "form-control" })
+    <br />
+    @Html.Label("Desription")
+    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", rows = 4 })
+    <br />
+    <button class="btn btn-success">Save the changes</button>
+</form>
+<script>
+    function showMessage() {
+        alert("Your experience has been updated!");
+    }
+</script>
+

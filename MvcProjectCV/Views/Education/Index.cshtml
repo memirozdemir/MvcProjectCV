@@ -1,0 +1,59 @@
+﻿@using MvcProjectCV.Models.Entity
+@model List<Education>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>My Education List</h2>
+<br />
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success mt-3">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger mt-3">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Subtitle1</th>
+        <th>Subtitle2</th>
+        <th>AvgNote</th>
+        <th>Date</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Title</td>
+            <td>@x.Subtitle1</td>
+            <td>@x.Subtitle2</td>
+            <td>@x.AvgNote</td>
+            <td>@x.Date</td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/Education/EditEducation/@x.ID"><i class="fas fa-pencil-alt"></i>Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-danger btn-sm" href="/Education/DeleteEducation/@x.ID"><i class="fas fa-trash"></i>Delete</a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="/Education/AddEducation/" class="btn btn-success">Add New Education</a>
+
+
+
+

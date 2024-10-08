@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AddAdmin";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Add New User</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+    <input type="text" name="Username" class="form-control" placeholder="Username" required />
+    <br />
+    <input type="text" name="Password" class="form-control" placeholder="Password" required />
+    <br />
+
+    <button class="btn btn-success">Add</button>
+</form>
+<script>
+    function showMessage() {
+        alert("User has been added!");
+    }
+</script>
+
+
+

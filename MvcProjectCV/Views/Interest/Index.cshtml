@@ -1,0 +1,21 @@
+﻿@using MvcProjectCV.Models.Entity
+@model List<Interest>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Edit Your Interests</h2>
+<br />
+<form method="post">
+    @foreach (var x in Model)
+    {
+        <label>Description 1</label>
+<textarea rows="5" class="form-control" name="Interest1">@x.Interest1</textarea>
+        <label>Description 2</label>
+<textarea rows="5" class="form-control" name="Interest2">@x.Interest2</textarea>
+    }
+    <br />
+    <button class="btn btn-success">Save changes</button> &nbsp; <a href="/Interest/Index/" class="btn btn-danger">Discard</a>
+</form>
+

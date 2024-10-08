@@ -1,0 +1,26 @@
+﻿@model MvcProjectCV.Models.Entity.Skill
+@{
+    ViewBag.Title = "NewSkill";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h4>Add New Skill</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+    @Html.HiddenFor(x => x.ID)
+    @Html.Label("Skill Description")
+    @Html.TextBoxFor(x => x.Skill1, new { @class = "form-control" })
+    <br />
+    @Html.Label("Skill Rate")
+    @Html.TextBoxFor(x => x.Rate, new { @class = "form-control" })
+    <br />
+    
+    <button class="btn btn-success">Add skill</button>
+</form>
+<script>
+    function showMessage() {
+        alert("Your skill has been added!");
+    }
+</script>

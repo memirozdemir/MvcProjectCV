@@ -1,0 +1,30 @@
+﻿@model MvcProjectCV.Models.Entity.Certificate
+
+@{
+    ViewBag.Title = "GetCertificate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<h4>Edit Certificates</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+    @Html.Label("Certificate Description")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date Certified")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Save changes</button>
+    <a href="/Certificate/DeleteCertificate/@ViewBag.d" class="btn btn-danger">Delete</a>
+</form>
+<script>
+    function showMessage() {
+        alert("Your certificate has been changed!");
+    }
+</script>
+
+

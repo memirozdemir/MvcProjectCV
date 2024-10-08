@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "AddExp";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h4>Add New Experience</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+    <input type="text" name="Title" class="form-control" placeholder="Enter the title" required/>
+    <br />
+    <input type="text" name="Subtitle" class="form-control" placeholder="Enter the subtitle" required/>
+    <br />
+    <input type="text" name="Date" class="form-control" placeholder="Enter the work date" required/>
+    <br />
+    <textarea rows="4" name="Description" class="form-control" placeholder="Enter your description" required></textarea>
+    <br />
+    <button class="btn btn-success">Add</button>
+</form>
+<script>
+    function showMessage() {
+        alert("Your experience has been added!");
+    }
+</script>
+

@@ -1,0 +1,24 @@
+﻿
+<div class="resume-section-content">
+    <form method="post" onsubmit="showMessage()">
+        <h2 class="mb-5">Contact me</h2>
+        <label>Name</label>
+        <input type="text" class="form-control" name="Sender" required/>
+
+        <label>Mail</label>
+        <input type="text" class="form-control" name="Mail"required/>
+
+        <label>Subject</label>
+        <input type="text" class="form-control" name="Subject" required/>
+
+        <label>Message</label>
+        <textarea class="form-control" name="Message" rows="4" required></textarea>
+        <br />
+        <button class=" btn btn-success">Send Message</button>
+    </form>
+</div>
+<script>
+    function showMessage() {
+        alert("Your message has been sent!");
+    }
+</script>

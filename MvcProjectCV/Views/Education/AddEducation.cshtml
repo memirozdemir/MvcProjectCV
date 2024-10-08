@@ -1,0 +1,41 @@
+﻿@model MvcProjectCV.Models.Entity.Education
+
+@{
+    ViewBag.Title = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<br />
+<h4>Add New Education</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+
+    @Html.Label("Title")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Title, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Subtitle 1")
+    @Html.TextBoxFor(x => x.Subtitle1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Subtitle1, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Subtitle 2")
+    @Html.TextBoxFor(x => x.Subtitle2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Subtitle2, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Date")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Date, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("GPA")
+    @Html.TextBoxFor(x => x.AvgNote, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.AvgNote, "", new { @style = "color:red" })
+    <br />
+
+    <button class="btn btn-success">Add Education</button>
+</form>
+
+
+

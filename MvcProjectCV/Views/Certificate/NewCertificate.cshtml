@@ -1,0 +1,27 @@
+﻿@model MvcProjectCV.Models.Entity.Certificate
+
+@{
+    ViewBag.Title = "NewCertificate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Add Certificates</h4>
+<br />
+<form class="form-group" method="post" onsubmit="showMessage()">
+    @Html.Label("Certificate Description")
+    @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    <br />
+    @Html.Label("Date Certified")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Submit</button>
+</form>
+<script>
+    function showMessage() {
+        alert("Your certificate has been added!");
+    }
+</script>
+
+
